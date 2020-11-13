@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #no{
+            position: absolute;
+            left: 10px;
+            top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Do you love me</h1>
+ <input type="button" value="Yes" onclick="showYes();">
+    <input type="button" id="no" value="No" onmouseover="showNo()">
+     <script>
+     function showYes() {
+         alert("Dung roi");
+     }
+     function showNo() {
+         let topValue=Math.floor(Math.random()*window.innerHeight);
+         let leftValue=Math.floor(Math.random()*window.innerWidth);
+         document.getElementById("no").style.left=leftValue+"px";
+         document.getElementById("no").style.top=topValue+"px";
+     }
+</script>
+</body>
+</html>
